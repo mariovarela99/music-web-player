@@ -1,7 +1,15 @@
+import React from "react";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import "./styles/reset.scss";
+import Player from "./views/player";
+
 function App() {
   return (
     <>
-      <h1>Web Music Player</h1>
+      <Header />
+      <Player />
+      <Footer />
     </>
   );
 }
