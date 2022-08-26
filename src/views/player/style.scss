@@ -1,4 +1,28 @@
-.transparent-box {
-  background: rgba(255, 255, 255, 0.6);
+div.transparent-box {
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 16px;
+  padding: 10px;
+}
+
+main.wrapper {
+  width: 100%;
+  padding: 35px 30px;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "player list" "playlists list";
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 300px 300px;
+}
+
+div.player {
+  grid-area: player;
+}
+
+div.playlists {
+  grid-area: playlists;
+}
+
+div.music-list {
+  grid-area: list;
 }
