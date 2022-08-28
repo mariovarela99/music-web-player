@@ -13,8 +13,8 @@ main.wrapper {
   display: grid;
   grid-gap: 20px;
   grid-template-areas: "player list" "playlists list";
-  grid-template-columns: 350px 1fr;
-  grid-template-rows: 300px 300px;
+  grid-template-columns: 330px 1fr;
+  grid-template-rows: 350px 350px;
 }
 
 div.player {
@@ -45,13 +45,18 @@ div.music-list {
     div.image-info {
       width: 120px;
       height: 120px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      // border: 1px solid rgba(255, 255, 255, 0.5);
       border-radius: 8px;
       margin-right: 10px;
+      overflow: hidden;
 
       display: flex;
       align-items: center;
       justify-content: center;
+
+      img {
+        width: 100%;
+      }
     }
 
     div.text-info {
@@ -110,16 +115,103 @@ div.music-list {
 
     thead {
       width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(255, 255, 253, 0.6);
+      margin-bottom: 10px;
 
       tr {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr 2fr 2fr;
+
+        th {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.6);
+          // text-align: left;
+        }
+
+        th.title,
+        th.artist {
+          text-align: left;
+        }
       }
     }
 
+    tbody::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    tbody::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    tbody::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+    }
+
     tbody {
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      overflow: auto;
+      max-height: 500px;
+
       tr {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr 2fr 2fr;
+
         td {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 10px;
+
+          color: rgba(255, 255, 255, 0.8);
           display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            -webkit-appearance: inherit;
+          }
+
+          td:last-child {
+            margin-bottom: 0;
+          }
+
+          div.min-cover {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            overflow: hidden;
+            // border: 1px solid rgba(255, 255, 255, 0.4);
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        td:nth-child(2),
+        td:nth-child(3) {
+          text-align: left;
+          justify-content: flex-start;
+        }
+
+        td:nth-child(2),
+        td:nth-child(4) {
+          color: #ffffff;
         }
       }
     }
@@ -131,19 +223,24 @@ div.music-list {
 }
 
 .song-wrapper {
-  width: 90%;
+  // width: 90%;
   padding: 10px;
 
   div.song-cover-container {
-    width: 100%;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-bottom: 20px;
     border-radius: 8px;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+      width: 100%;
+    }
   }
 
   div.song-options {
