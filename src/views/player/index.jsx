@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
-import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
+import { BiHeart, BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { GrPlayFill } from "react-icons/gr";
 import { FaInfoCircle } from "react-icons/fa";
 import { RiPlayList2Fill } from "react-icons/ri";
@@ -20,7 +20,10 @@ function Player() {
       <div className="transparent-box player">
         <div className="song-wrapper">
           <div className="song-cover-container">
-            <img src="../../assets/song-cover.png" alt="Song Cover" />
+            <img
+              src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+              alt="Song Cover"
+            />
           </div>
 
           <div className="song-options">
@@ -73,7 +76,6 @@ function Player() {
             max="100"
             step="1"
             value={soundValue}
-            defaultValue="30"
             onChange={handleChangeSoundValue}
           />
           <button type="button">
@@ -89,7 +91,10 @@ function Player() {
       <div className="transparent-box music-list">
         <div className="list-info">
           <div className="image-info">
-            <img src="../../assets/playlist-cover.png" alt="PlayList Cover" />
+            <img
+              src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+              alt="PlayList Cover"
+            />
           </div>
           <div className="text-info">
             <strong>PLAYLIST</strong>
@@ -102,18 +107,217 @@ function Player() {
         <table className="list-of-musics">
           <thead>
             <tr>
-              <caption>#</caption>
-              <caption>TITLE</caption>
-              <caption>ARTIST</caption>
-              <caption>DURATION</caption>
+              <th>#</th>
+              <th className="title">TITLE</th>
+              <th className="artist">ARTIST</th>
+              <th></th>
+              <th>DURATION</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>1</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>the remedy for a broken heart</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>the remedy for a broken heart</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>every body dies in her nightmarys</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>NUMB</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>BAD!</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>SAD!</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>Moonlight</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>Changes</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>Hope</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>4Peat</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>Ex bitch</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>
+                <div className="min-cover">
+                  <img
+                    src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8b673f80818e4cc1b975e8d8cd81344c.1000x1000x1.png"
+                    alt="Min Cover Music"
+                  />
+                </div>
+                <span>the remedy for a broken heart</span>
+              </td>
+              <td>XXXtentacion</td>
+              <td>
+                <BiHeart size={18} />
+              </td>
+              <td>2:30</td>
             </tr>
           </tbody>
         </table>
