@@ -85,7 +85,46 @@ function Player() {
       </div>
 
       <div className="transparent-box playlists">
-        <h1> Playlists </h1>
+        <h2> Playlists </h2>
+
+        <ul>
+          <li>
+            <strong>Tchill Mix by mariovarela99 vol 2.0</strong>
+            <button>
+              <span>...</span>
+            </button>
+          </li>
+
+          <li>
+            <strong>Tchill Mix by mariovarela99 vol 2.0</strong>
+            <button>
+              <span>...</span>
+            </button>
+          </li>
+
+          <li>
+            <strong>Tchill Mix by mariovarela99 vol 2.0</strong>
+            <button>
+              <span>...</span>
+            </button>
+          </li>
+
+          <li>
+            <strong>Tchill Mix by mariovarela99 vol 2.0</strong>
+            <button>
+              <span>...</span>
+            </button>
+          </li>
+
+          <li>
+            <strong>Tchill Mix by mariovarela99 vol 2.0</strong>
+            <button>
+              <span>...</span>
+            </button>
+          </li>
+        </ul>
+
+        <button>New Playlist</button>
       </div>
 
       <div className="transparent-box music-list">
